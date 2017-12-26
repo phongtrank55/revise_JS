@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+</head>
+<body>
+<h3>Hãy nhập 2 số và click vào nút tính tổng</h3>
+    <input type="number" id="a" />
+    <input type="button" onclick="cal(this.value)" value="+"/>
+    <input type="button" onclick="cal(this.value)" value="-"/>
+    <input type="button" onclick="cal(this.value)" value="*"/>
+    <input type="button" onclick="cal(this.value)" value="/"/>
+    <input type="button" onclick="cal(this.value)" value="^"/>
+    <input type="number" id="b" />
+    =
+    <input type="number" id="result" />
+    
+
+    <script type="text/javascript">
+        function cal(operator)
+        {
+            var a = Number(document.getElementById('a').value);
+            var b = Number(document.getElementById('b').value);
+            
+            switch(operator){
+                case '+':
+                    document.getElementById('result').value = a+b;
+                    break;
+                case '-':
+                    document.getElementById('result').value = a-b;
+                    break;
+                case '*':
+                    document.getElementById('result').value = a*b;
+                    break;
+                case '/':
+                    document.getElementById('result').value = a/b;
+                    break;
+                default:
+                    document.getElementById('result').value=Math.pow(a, b);
+                    break;
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+</head>
+<body>
+    Số ký tự đã gõ: <input type="number" id="length" readonly=true>
+        
+    <br>
+    <br>
+
+    <textarea  id="message" cols="50" rows="10"
+        oninput="document.getElementById('length').value = this.value.length"></textarea>
+
+
+</body>
+</html>

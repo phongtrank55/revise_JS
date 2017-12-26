@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+</head>
+<body id="bg">
+    <input type="button" value="Xanh" onclick="changeBackground('blue')"/>
+    <input type="button" value="Đỏ" onclick="changeBackground('red')"/>
+    <input type="button" value="Vàng" onclick="changeBackground('yellow')"/>
+
+
+    <script type="text/javascript">
+        function changeBackground(color){
+            document.getElementById('bg').style.backgroundColor=color;
+        }
+    </script>
+
+</body>
+</html>

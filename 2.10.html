@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+</head>
+<body>
+<h3>Hãy nhập 2 số và click vào nút tính tổng</h3>
+    <input type="number" id="a" />
+    +
+    <input type="number" id="b" />
+    =
+    <input type="number" id="result" />
+    <input type="button" onclick="sum()" value="Tinh tổng"/>
+
+    <script type="text/javascript">
+        function sum()
+        {
+            var a = Number(document.getElementById('a').value);
+            var b = Number(document.getElementById('b').value);
+            document.getElementById('result').value = a + b;
+        }
+    </script>
+
+</body>
+</html>

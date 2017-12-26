@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+</head>
+<body>
+    Nhập ngày tháng năm sinh của bạn:
+    <input type="date" id="birth" />
+    <input type="button" onclick="check()" value="Kiểm tra"/>
+    <script type="text/javascript">
+        function check()
+        {
+            var birth = document.getElementById('birth').value;
+            var birthDay = new Date(birth);
+            var now = new Date();
+            if(birthDay.getYear()>now.getYear())
+                alert('Năm sinh không đc lớn hơn năm hiện tại!');
+            else
+                alert('Tuổi của bạn: '+ (now.getYear()-birthDay.getYear()));
+        }
+    </script>
+
+</body>
+</html>

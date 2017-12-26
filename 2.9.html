@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+</head>
+<body>
+    Nhập số để chuyển trang:
+    <input type="number" id="page" />
+    <input type="button" onclick="redirect()" value="Go"/>
+
+    <script type="text/javascript">
+        function redirect()
+        {
+            var index = Number(document.getElementById('page').value);
+            switch(index){
+                case 1: 
+                    window.location="http://vinhuni.edu.vn";
+                    break;
+                case 2: 
+                    window.location="https://yahoo.com";
+                    break;
+                case 3: 
+                    window.location="https://microsoft.com";
+                    break;
+                default: 
+                    window.location="https://google.com";
+                    break;
+            }
+            
+        }
+    </script>
+
+</body>
+</html>
