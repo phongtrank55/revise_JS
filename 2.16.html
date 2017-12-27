@@ -6,22 +6,33 @@
 
 </head>
 <body>
-<h3>Bảng cửu chương từ 9 đến 2</h3>
-<pre id="bcc">
+    <h3>Validation</h3>
 
-</pre>
+    <p>Số điện thoại: </p><input type="text" name="" id="txtPhone"> 
+    <p>Email: </p>  <input type="text" name="" id="txtEmail"> 
+    <p>Ngày sinh: </p> <input type="text" name="" id="txtDate">
+    <p>
+    <input type="button" value="Send" onclick="validate()">
+    </p>
+    
     <script type="text/javascript">
-
-        var result="";
-        for(i=1; i<=10; i++)
+        // var patternPhone = new RegExp('\\d{0,2}');
+        var rePhone = /^\d{0,2}$/;
+        var reEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+        var reDate = /^((0?[1-9])|([1-2][0-9])|(3[0-1]))[-\/]((0?[1-9])|(1[0-2]))[-\/]\d{2,4}$/; //dd//mm/yyyy
+        
+        function validate()
         {
-            for(j=9; j>1; j--)
-                result+=j + " x " + i + " = " + (i*j)+"\t";
-            result+="\n";
+
+            if(!rePhone.test(document.getElementById('txtPhone').value))
+                alert('Số điện thoại không đúng định dạng!');
+            else if(!reEmail.test(document.getElementById('txtEmail').value))
+                alert('Email không đúng định dạng!');
+            else if(!reDate.test(document.getElementById('txtDate').value))
+                alert('Ngày tháng không đúng định dạng!');
+            else
+                alert('Bạn đã gửi thông tin hợp lệ!');
         }
-        
-        document.getElementById('bcc').innerText = result;
-        
     </script>
 
 </body>
