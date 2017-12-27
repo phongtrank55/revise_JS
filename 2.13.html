@@ -6,41 +6,19 @@
 
 </head>
 <body>
-<h3>Hãy nhập 2 số và click vào nút tính tổng</h3>
-    <input type="number" id="a" />
-    <input type="button" onclick="cal(this.value)" value="+"/>
-    <input type="button" onclick="cal(this.value)" value="-"/>
-    <input type="button" onclick="cal(this.value)" value="*"/>
-    <input type="button" onclick="cal(this.value)" value="/"/>
-    <input type="button" onclick="cal(this.value)" value="^"/>
-    <input type="number" id="b" />
-    =
-    <input type="number" id="result" />
+    <h2>Bạn hãy nhập số lượng và giá</h2>
+    Số lượng: <input type="number" id="txtNum" onkeyup="cal()">
+    Đơn giá: <input type="number" id="txtPrice" onkeyup="cal()">
+    <hr>
+    Thành tiền: <input type="number" readonly=true id="txtResult">
     
-
     <script type="text/javascript">
-        function cal(operator)
+        
+        function cal()
         {
-            var a = Number(document.getElementById('a').value);
-            var b = Number(document.getElementById('b').value);
-            
-            switch(operator){
-                case '+':
-                    document.getElementById('result').value = a+b;
-                    break;
-                case '-':
-                    document.getElementById('result').value = a-b;
-                    break;
-                case '*':
-                    document.getElementById('result').value = a*b;
-                    break;
-                case '/':
-                    document.getElementById('result').value = a/b;
-                    break;
-                default:
-                    document.getElementById('result').value=Math.pow(a, b);
-                    break;
-            }
+            var num = Number(document.getElementById('txtNum').value);
+            var price = Number(document.getElementById('txtPrice').value);
+            document.getElementById('txtResult').value = num * price;
         }
     </script>
 
