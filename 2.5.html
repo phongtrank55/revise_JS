@@ -16,9 +16,8 @@
 
     <script type="text/javascript">
         function changeBackground(){
-            var sel = document.getElementById('selColor');
-            var color = sel.options[sel.selectedIndex].value;
-            document.getElementById('bg').style.backgroundColor=color;
+            var color = document.getElementById('selColor').value;
+            document.getElementById('bg').style.backgroundColor = color;
         }
         changeBackground();
     </script>
